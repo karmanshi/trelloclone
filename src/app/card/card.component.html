@@ -1,0 +1,99 @@
+
+    <!-- <p class="card" draggable="true" (dragstart)="dragStart($event)" id="{{card.id}}">
+    {{card.description}}
+   </p> -->
+   <div draggable="true" (dragstart)="dragStart($event, card.status)" id="{{card.id}}" style="padding-left:10px;padding-top:10px">
+    <div class="card shadowed-box rounded" style="width: 320px;max-width: 320px;">
+
+        <div class="card-body" style="padding: 0px;">
+            <table id="card" class="w-100">
+                <tr>
+                    <td>
+                        <table>
+                            <tr>
+                                <td>
+                                    <span class="text-success font-weight-bold" style="font-size: 20px;">#{{ card.OrderNo }}</span>
+                                </td>
+                                <td>
+                                    <button class="btn btn-sm btn-danger text-white btn1 ">PAYMENT DUE</button>
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        
+                    </td>
+                    <td colspan="2">
+                        <div class="text-secondary "><i class="bi bi-paperclip mx-1"></i><span class="border-bottom"
+                                style="font-size: 12px;"><a href="javascript:void(0)">Repair Order</a></span><br><i
+                                class="bi bi-paperclip mx-1"></i><span style="font-size: 12px;"
+                                class="border-bottom"><a href="javascript:void(0)">Invoice</a></span></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" class="text-secondary" style="font-size: 12px;">
+                        <i class="fa fa-car mx-1"></i>{{ card.CarModel }}
+                    </td>                  
+                </tr>
+                <tr class="text-secondary" style="border-bottom:1px solid gray;font-size: 12px;">
+                    <td>
+                        <i class="bi bi-person-fill mx-1"></i>{{ card.CustomerName }}
+                    </td>
+                    <td colspan="2" class=" text-success font-weight-bold ">
+                        <i class="bi bi-whatsapp mx-1"></i>WhatsApp
+                    </td>
+                </tr>
+                <tr style="border-bottom:1px solid gray">
+                    <td colspan="3">
+                        <table style="width:100%">
+                            <tr>
+                                <td style="font-size: 10px;">
+                                    INVOICE
+                                </td>
+                                <td style="font-size: 10px;">
+                                    CREATED BY
+                                </td>
+                                <td style="font-size: 10px;">
+                                    COMPLETION DATE
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-bold" style="font-size: 10px;">
+                                    {{ card.InvoiceNo }}
+                                </td>
+                                <td class=" font-weight-bold" style="font-size: 10px;">
+                                    {{ card.CreatedBy }}
+                                </td>
+                                <td class="font-weight-bold" style="font-size: 10px;">
+                                    {{ (card.CompletionDate | date: 'dd MMM yyyy hh:mm a').toUpperCase()}}
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr class="text-secondary " style="font-size: 12px;">
+                    <td>
+                        TOTAL:
+                    </td>
+                    <td>
+                        AMOUNT DUE:
+                    </td>
+
+                </tr>
+                <tr>
+                    <td class="font-weight-bold">
+                        AED {{ card.TotalAmount.toFixed(2) }}
+                    </td>
+
+                    <td class="font-weight-bold text-danger " style="font-size: 15px;">
+                        AED {{ card.DueAmount.toFixed(2) }}
+                    </td>
+                </tr>
+
+
+            </table>
+
+        </div>
+
+    </div>
+    <br>
+</div>

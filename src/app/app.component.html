@@ -1,0 +1,44 @@
+
+
+    <div>
+      <table class="w-100">
+        <tr>
+          <td colspan="3" style="font-size: 20px;padding-bottom: 30px;" class="font-weight-bold">
+            Total Due: <span class="text-success" >AED {{TotalDue.toLocaleString()}}</span>
+          </td>
+        </tr>
+        <tr style="padding-bottom: 30px;">
+          <td style="width: 150px;">
+            <!-- <span style="font-size: 20px;">
+              <i class="bi-arrow-down-up mx-1"></i>
+              Sort by</span><i class="bi-chevron-down mx-1"></i> -->
+              <div class="dropdown">
+                <div  id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+                  <span style="font-size: 20px;">
+                    <i class="bi-arrow-down-up mx-1"></i>
+                    Sort by</span><i class="bi-chevron-down mx-1"></i>
+                  </div>
+                
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="javscript:void(0)" (click)="Sort('OrderNo', 'Asc')">Order No Ascending</a>
+                  <a class="dropdown-item" href="javscript:void(0)" (click)="Sort('OrderNo', 'Desc')">Order No Descending</a>
+                  <a class="dropdown-item" href="javscript:void(0)" (click)="Sort('CustomerName', 'Asc')">Customer Name Ascending</a>  
+                  <a class="dropdown-item" href="javscript:void(0)" (click)="Sort('CustomerName', 'Desc')">Customer Name Descending</a>                
+                </div>
+              </div>
+          </td>
+          <td style="width: 100px;">
+            <span style="font-size: 20px; "><i class="bi-filter mx-1"></i>Filter</span><i class="bi-chevron-down mx-1"></i>
+          </td>
+          <td >
+            <div class="form-group has-search">
+              <span class="fa fa-search  form-control-feedback"></span>
+              <input type="text" class="form-control text-secondary" style="font-size: 13px;width:100%;background-color: #f5f9fc;"
+                placeholder="Customer name/Phone No./Reg No." [(ngModel)] = "FilterText" (keypress)="OnKeyPress($event)">
+            </div>
+          </td>
+        </tr>
+      </table> 
+    </div>
+    <app-board></app-board>
+  

@@ -1,0 +1,40 @@
+body{
+    font-size: 10px;
+}
+
+
+.btn1{
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 4px;
+    height:20px;
+    border:1px solid black;
+    padding:0 ;
+    width: 100px;
+}
+
+.shadowed-box {
+    
+        box-shadow: 10px 10px 10px #888888;
+     
+}
+
+
+/* Bootstrap 4 text input with search icon */
+
+.has-search .form-control {
+    padding-left: 2.375rem;
+}
+
+.has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+    font-size: 16px;
+}

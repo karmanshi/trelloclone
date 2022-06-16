@@ -1,0 +1,7 @@
+div {
+    background: #fff;
+    display: flex;
+    padding: 0 5px;
+    height: 100vh;
+    overflow-x:hidden;
+  }
